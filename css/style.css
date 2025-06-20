@@ -26,6 +26,29 @@ a {
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
 }
+.section-header {
+  text-align: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+.section-header h2 {
+  font-size: 32px;
+  text-transform: capitalize;
+}
+.section-header::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 120px;
+  height: 3px;
+  background-color: #5e95fd;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
 /* header */
 .header {
   background-color: transparent;
@@ -46,14 +69,13 @@ a {
   display: flex;
   justify-content: flex-end;
 }
-.header .nav > li> a {
+.header .nav > li > a {
   text-transform: capitalize;
   padding: 10px 15px;
   color: #fff;
   position: relative;
-
 }
-.header .nav > li >a::after {
+.header .nav > li > a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -61,38 +83,37 @@ a {
   width: 0;
   height: 4px;
   background-color: #5e95fd;
-    transition: 0.5s;
+  transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
 }
-.header .nav > li >a:hover::after {
+.header .nav > li > a:hover::after {
   width: calc(100% - 10px);
 }
-.dropDown{
+.dropDown {
   position: relative;
 }
-.dropDown-menu{
-  position:absolute ;
+.dropDown-menu {
+  position: absolute;
   background-color: #5e95fd;
   left: -21%;
   margin: auto;
   padding: 10px;
   top: calc(100% + 20px);
-  border-radius:4px ;
-  -webkit-border-radius:4px ;
-  -moz-border-radius:4px ;
-  -ms-border-radius:4px ;
-  -o-border-radius:4px ;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   display: none;
 }
-.dropDown:hover .dropDown-menu{
+.dropDown:hover .dropDown-menu {
   display: block;
 }
 .dropDown-menu li a {
-    color:#fff
-
+  color: #fff;
 }
 /* home */
 .home {
@@ -147,4 +168,58 @@ a {
 .home .action button:last-of-type {
   background-color: #5e95fd;
   color: #fff;
+}
+
+/* section webiste */
+.website {
+  padding: 20px 0;
+  margin: 30px;
+}
+
+.website .cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.website .card {
+  padding: 15px;
+  border: 1px solid gray;
+  margin: 10px;
+  position: relative;
+}
+.website .card::after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background-color: rgb(0 0 0 /30%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.website .card:hover::after{
+  width: 100%;
+}
+.website .card i {
+  color: #5e95fd;
+  margin: 10px 0;
+  display: block;
+  font-size: 22px;
+}
+.website .card h3 {
+  text-transform: capitalize;
+  margin: 10px 0;
+}
+.website .card p {
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+.website .card a {
+  color: #5e95fd;
+  text-transform: capitalize;
 }
