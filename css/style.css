@@ -202,7 +202,7 @@ a {
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
 }
-.website .card:hover::after{
+.website .card:hover::after {
   width: 100%;
 }
 .website .card i {
@@ -222,4 +222,84 @@ a {
 .website .card a {
   color: #5e95fd;
   text-transform: capitalize;
+}
+
+/* portfolio */
+.portfolio .cards {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.portfolio .card {
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  width: 30%;
+  margin: 10px 12px;
+}
+.portfolio .card::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(0 0 0 /70%);
+  width: 0%;
+  height: 0%;
+  top: 50%;
+  left: 50%;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.portfolio .card:hover::before {
+  width: 100%;
+  height: 100%;
+}
+.portfolio .card img {
+  width: 100%;
+}
+
+.portfolio .card .card-items {
+  position: relative;
+}
+.portfolio .card .caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  z-index: 2;
+}
+.portfolio .card:hover .caption {
+  visibility: visible;
+  opacity: 1;
+}
+.portfolio .caption a,
+.portfolio .caption p {
+  font-size: 22px;
+  color: #fff;
+}
+.portfolio .caption i {
+  background-color: #5e95fd;
+  padding: 12px;
+  margin-top: 12px;
 }
