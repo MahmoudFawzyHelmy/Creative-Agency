@@ -469,8 +469,9 @@ a {
   align-items: center;
 }
 .pricing .pricingPlans .pricingItems {
+  width: 30%;
   border: 1px solid gray;
-  padding: 12px;
+  padding: 20px 80px;
   border-radius: 9px;
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
@@ -531,3 +532,207 @@ a {
 }
 
 /* end pricing plan */
+
+/* testimonials section */
+.testimonials {
+  background: #f5f7fa;
+  padding: 60px 0;
+}
+.testimonials-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.testimonial-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 30px 24px;
+  max-width: 320px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.testimonial-card:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+.testimonial-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+.testimonial-card h3 {
+  margin: 10px 0 4px;
+  font-size: 20px;
+}
+.testimonial-card span {
+  color: #5e95fd;
+  font-size: 15px;
+  display: block;
+  margin-bottom: 10px;
+}
+.testimonial-card p {
+  font-style: italic;
+  color: #444;
+}
+
+/* our team section */
+.our-team {
+  background: #fff;
+  padding: 60px 0 40px 0;
+}
+.team-cards {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.team-card {
+  background: #f5f7fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 24px 18px;
+  max-width: 240px;
+  text-align: center;
+  transition: box-shadow 0.3s;
+}
+.team-card:hover {
+  box-shadow: 0 4px 24px rgba(94,149,253,0.15);
+}
+.team-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 14px;
+}
+.team-card h3 {
+  margin: 8px 0 2px;
+  font-size: 18px;
+}
+.team-card span {
+  color: #5e95fd;
+  font-size: 14px;
+}
+
+/* footer section */
+.footer {
+  background: #222;
+  color: #fff;
+  padding: 40px 0 0 0;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #444;
+}
+.footer-logo img {
+  width: 80px;
+}
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+.footer-links li a {
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+.footer-links li a:hover {
+  color: #5e95fd;
+}
+.footer-social a {
+  color: #fff;
+  margin-right: 16px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+.footer-social a:hover {
+  color: #5e95fd;
+}
+.footer-bottom {
+  text-align: center;
+  padding: 18px 0 8px 0;
+  font-size: 15px;
+  color: #aaa;
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+  .portfolio .card,
+  .pricing .pricingPlans .pricingItems {
+    width: 45%;
+    margin: 10px auto;
+  }
+  .website .cards,
+  .offer .cards,
+  .team-cards,
+  .testimonials-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    width: 95%;
+  }
+  .header .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .about .items {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about .content, .about .img {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+  .numbers .items {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .pricing .pricingPlans {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pricing .pricingPlans .pricingItems {
+    width: 90%;
+    margin-bottom: 18px;
+    padding: 20px 20px;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+}
+@media (max-width: 500px) {
+  .section-header h2 {
+    font-size: 22px;
+  }
+  .testimonial-card, .team-card {
+    max-width: 95vw;
+    padding: 18px 6px;
+  }
+  .footer-logo img {
+    width: 60px;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .footer-social a {
+    font-size: 18px;
+    margin-right: 8px;
+  }
+  .footer-bottom {
+    font-size: 12px;
+  }
+}
